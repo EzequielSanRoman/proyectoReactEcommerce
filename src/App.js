@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from "./Components/Footer/Footer";
+import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
+import Navbar from "./Components/Navbar/Navbar";
+import ProductCard from "./Components/ProductCard/ProductCard";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Navbar />
+      <ItemListContainer greeting={"Bienvenido a tu prózimo vuelo"} />
+      <ProductCard
+        title={"Dji Avata FPV combo"}
+        price={650000}
+        hayStock={true}
+      />
+      <ProductCard title={"Dji FPV combo"} price={580000} hayStock={true} />
+      <ProductCard title={"Dji Helices"} price={10000} hayStock={true} />
+      <ProductCard title={"Dji Bolso"} price={85000} hayStock={false} />
+      <Footer />
     </div>
   );
 }
