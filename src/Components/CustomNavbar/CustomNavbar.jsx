@@ -22,7 +22,7 @@ const pages = [
 ];
 const settings = ["Perfil", "Contactanos"];
 
-const Footer = () => {
+const CustomNavbar = () => {
   let numero = 12;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [setAnchorElUser] = React.useState(null);
@@ -133,4 +133,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default CustomNavbar;

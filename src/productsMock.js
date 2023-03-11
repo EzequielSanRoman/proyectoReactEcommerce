@@ -1,0 +1,51 @@
+export const products = [
+  {
+    id: 1,
+    tittle: "Dji Avata",
+    price: 680000,
+    description: "El primer Dron hibrido FPV para exteriores e interiores.",
+    category: "drones",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340057/30e659483b3293ebe3e3e180087e0cfa_ultra_geaz69.jpg",
+  },
+  {
+    id: 2,
+    tittle: "Dji FPV",
+    price: 55000,
+    description: "El dron perfecto para aprender a volar en modo acro",
+    category: "drones",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340278/FPV2_uyotxc.png",
+  },
+  {
+    id: 3,
+    tittle: "DJI MINI 3 PRO RC FLY MORE COMBO PLUS",
+    price: 500000,
+    description: "Tamaño mini - Peso 249grm - sensor de 1/1,3",
+    category: "drones",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340179/DJI-Mini-3-Pro-scaled-1_ca38yt.jpg",
+  },
+  {
+    id: 4,
+    tittle: "Fly combo Baterias Dji FPV",
+    price: 140000,
+    description:
+      "Contioene dos baterias de vuelo inteligentes + base de carga - capacidad de carga 44,4 Wh - duración de vuelo 20 minutos -  El sistema monitorea el estado de la batería para un vuelo sin preocupaciones.",
+    category: "accesorios",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340326/5a8d19733257e3078ceea9daa86f8a73_large.jpg_wtwmyf.webp",
+  },
+  {
+    id: 5,
+    tittle: "Bolso DJI",
+    price: 150000,
+    description: "Bolso para transportar Kit Fly Combo",
+    category: "accesorios",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340394/bolso-de-hombro-mavic-part14-300x300.jpg_x1j7oc.webp",
+  },
+  {
+    id: 6,
+    tittle: "Helices Dji FPV",
+    price: 10000,
+    description: "Helices de repuesto DJI FPV",
+    category: "accesorios",
+    img: "https://res.cloudinary.com/dzckfmdr9/image/upload/v1677340377/51Wnm88F5wL._AC_SX522_-300x300.jpg_dbmuls.webp",
+  },
+];

@@ -1,0 +1,12 @@
+.container {
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+.image {
+  width: 30%;
+  height: 65vh;
+}
+.tittle {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
