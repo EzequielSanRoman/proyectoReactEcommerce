@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
 import CustomNavbar from "./Components/CustomNavbar/CustomNavbar";
 import Footer from "./Components/Footer/Footer";
@@ -24,6 +24,8 @@ function App() {
         <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
 
         <Route path="/nosotros" element={<Nosotros />} />
+
+        <Route path="/formulario" element={<Form />} />
 
         <Route path="*" element={<h1>error 404: Not found</h1>} />
       </Routes>
