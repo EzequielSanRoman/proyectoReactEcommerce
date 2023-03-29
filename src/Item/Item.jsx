@@ -14,7 +14,7 @@ const Item = ({ element }) => {
       <CardMedia sx={{ height: 140 }} image={element.img} />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {element.tittle}
+          {element.title}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {element.description}

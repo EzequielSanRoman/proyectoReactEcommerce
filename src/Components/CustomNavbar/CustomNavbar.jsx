@@ -23,7 +23,6 @@ const pages = [
 const settings = ["Perfil", "Contactanos"];
 
 const CustomNavbar = () => {
-  let numero = 12;
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [setAnchorElUser] = React.useState(null);
 
@@ -37,7 +36,7 @@ const CustomNavbar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container style={{ backgroundColor: "#ff5722" }} maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -122,7 +121,7 @@ const CustomNavbar = () => {
             ))}
           </Box>
 
-          <CartWidget numero={numero} />
+          <CartWidget />
         </Toolbar>
       </Container>
     </AppBar>

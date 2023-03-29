@@ -37,7 +37,7 @@ const Footer = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container style={{ backgroundColor: "#ff5722" }} maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
             variant="h6"

@@ -1,8 +1,15 @@
 import { FaShoppingCart } from "react-icons/fa";
 import "./CartWidget.css";
-import { Link } from "react-router-dom";
 
-const CartWidget = ({ numero }) => {
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
+
+const CartWidget = () => {
+  const { getTotalQuantity } = useContext(CartContext);
+
+  const total = getTotalQuantity();
+
   return (
     <Link style={{ textDecoration: "none" }} to="/Cart">
       <div className="container-cart">
@@ -14,7 +21,7 @@ const CartWidget = ({ numero }) => {
           }}
         />
         <div className="bubble-counter">
-          <span>0</span>
+          <span>{total}</span>
         </div>
       </div>
     </Link>
