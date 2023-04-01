@@ -1,12 +1,11 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Form } from "react-router-dom";
 import Cart from "./Components/Cart/Cart";
-import Form from "./Components/Form/Form";
+
 import CustomNavbar from "./Components/CustomNavbar/CustomNavbar";
 import Footer from "./Components/Footer/Footer";
 import ItemDetailContainer from "./Components/ItemDetailContainer/ItemDetailContainer";
 import ItemListContainer from "./Components/ItemListContainer/ItemListContainer";
 import Login from "./Components/Login/Login";
-import Nosotros from "./Components/Nosotros/Nosotros";
 import CartContextProvider from "./Context/CartContext";
 
 function App() {
@@ -28,8 +27,6 @@ function App() {
           <Route path="/login" element={<Login />} />
 
           <Route path="/itemDetail/:id" element={<ItemDetailContainer />} />
-
-          <Route path="/nosotros" element={<Nosotros />} />
 
           <Route path="/formulario" element={<Form />} />
 

@@ -26,7 +26,6 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
 
-  // const productSelected = products.find((element) => element.id === Number(id));
   const onAdd = (cantidad) => {
     let producto = {
       ...productSelected,
@@ -42,7 +41,6 @@ const ItemDetailContainer = () => {
     });
   };
   let quantity = getQuantityById(Number(id));
-  console.log(quantity);
 
   return (
     <div
