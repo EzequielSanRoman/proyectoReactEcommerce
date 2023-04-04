@@ -1,8 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
-
-import ItemCount from "../ItemCount/ItemCount";
 import Swal from "sweetalert2";
 
 import { getDoc, collection, doc } from "firebase/firestore";

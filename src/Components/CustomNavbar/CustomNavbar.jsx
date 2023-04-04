@@ -12,11 +12,12 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import "./CustomNavbar.css";
 const pages = [
-  <Link to="/category/drones" style={{ textDecoration: "none" }}>
+  <Link className="menu" to="/category/drones" style={{ textDecoration: "none" }}>
     Drones
   </Link>,
-  <Link to="/category/accesorios" style={{ textDecoration: "none" }}>
+  <Link className="menu" to="/category/accesorios" style={{ textDecoration: "none" }}>
     Accesorios
   </Link>,
 ];
@@ -51,7 +52,11 @@ const CustomNavbar = () => {
               textDecoration: "none",
             }}
           >
-            <Link style={{ textDecoration: "none" }} to="/">
+            <Link
+              style={{ textDecoration: "none" }}
+              to="/"
+              className="logo-navbar"
+            >
               DRON STATION
             </Link>
           </Typography>

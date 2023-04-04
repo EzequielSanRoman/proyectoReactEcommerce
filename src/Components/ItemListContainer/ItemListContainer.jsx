@@ -42,7 +42,13 @@ const ItemListContainer = () => {
   }, [categoryName]);
 
   if (items.length === 0) {
-    return <BounceLoader color="#ff5c00" size={90} cssOverride={override} />;
+    return (
+      <BounceLoader
+        color="#ff5c00"
+        size={90}
+        cssOverride={override}
+      />
+    );
   }
 
   return (

@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React, { useContext, useState } from "react";
 import { CartContext } from "../../Context/CartContext";
+import "./Cart.css";
 import Swal from "sweetalert2";
 import FormCheckout from "../FormCheckout/FormCheckout";
 import { Link } from "react-router-dom";
@@ -12,7 +13,6 @@ const Cart = () => {
   const [showForm, setShowForm] = useState(false);
   const [orderId, setOrderId] = useState(null);
 
-  const precioTotal = getTotalPrice();
   const clear = () => {
     Swal.fire({
       title: "¿Querés vaciar el carrito?",
@@ -33,16 +33,27 @@ const Cart = () => {
   if (orderId) {
     return (
       <div>
-        <h1>gracias por tu compra</h1>
-        <h2>el comprobante de compra es : {orderId}</h2>
+        <h1>¡Muchas gracias por tu compra!</h1>
+        <h2>Npumero de operación : {orderId}</h2>
         <Link to="/">Continuar comprando</Link>
       </div>
     );
   }
+  if (cart.length === 0) {
+    return (
+      <div>
+        <img
+          src="https://res.cloudinary.com/dzckfmdr9/image/upload/v1680568704/undraw_Flying_drone_u3r2_xdozyv.png"
+          alt=""
+        />
+      </div>
+    );
+  }
   return (
-    <div>
+    <div className="cart-container">
       {!showForm ? (
         <div
+          className="container-items"
           style={{
             width: "70%",
             justifyContent: "space-evenly",
@@ -50,50 +61,38 @@ const Cart = () => {
         >
           {cart.map((elemento) => {
             return (
-              <div
-                style={{
-                  margin: "15px",
-                  justifyContent: "space-arrownd",
-                  borderRadius: "10px",
-                  backgroundColor: "white",
-                  alignItems: "center",
-                  display: "flex",
-                  border: "1px solid grey",
-                }}
-                key={elemento.id}
-              >
+              <div className="cart-item" key={elemento.id}>
                 <h2>{elemento.title}</h2>
                 <img src={elemento.img} alt="" style={{ width: "200px" }} />
                 <h3>Cantidad {elemento.quantity}</h3>
                 <h2>{elemento.price}</h2>
-                <button
-                  color="secondary"
+                <Button
+                  color="primary"
                   variant="contained"
                   onClick={() => deleteProductById(elemento.id)}
                 >
-                  ELIMINAR
-                </button>
+                  Elimiar
+                </Button>
               </div>
             );
           })}
-          <h1
-            style={{
-              fontFamily: "Segoe UI Symbol",
-            }}
-          >
-            Total $ {precioTotal}
-          </h1>
 
-          {cart.length > 0 && (
-            <div className="btn-cart">
-              <Button variant="contained" onClick={() => setShowForm(true)}>
-                Terminar la compra
-              </Button>
-              <Button onClick={clear} variant="contained">
-                Vaciar carrito
-              </Button>
-            </div>
-          )}
+          <div className="cart-info">
+            <h3>Subtotal ${getTotalPrice()}</h3>
+
+            {cart.length > 0 && (
+              <div className="btn-cart">
+                <Button variant="contained" onClick={() => setShowForm(true)}>
+                  Terminar la compra
+                </Button>
+                <Button onClick={clear} variant="contained">
+                  Vaciar carrito
+                </Button>
+              </div>
+            )}
+
+            <h1>PRECIO TOTAL ${getTotalPrice()}</h1>
+          </div>
         </div>
       ) : (
         <FormCheckout

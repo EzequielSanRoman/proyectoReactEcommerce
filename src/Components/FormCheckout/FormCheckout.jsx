@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./FormCheckout.css";
 import { addDoc, collection, updateDoc, doc } from "firebase/firestore";
 import { db } from "../../firebaseConfig";
 
@@ -33,8 +34,8 @@ const FormCheckout = ({ cart, getTotalPrice, setOrderId, clearCart }) => {
   };
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className="co-container">
+      <form onSubmit={handleSubmit} className="form">
         <input
           type="text"
           placeholder="Nombre"

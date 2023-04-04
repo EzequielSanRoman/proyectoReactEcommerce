@@ -14,7 +14,6 @@ function App() {
       <CartContextProvider>
         <CustomNavbar />
         <Routes>
-          {/* <Route path="/navBar" element={} /> */}
           <Route path="/" element={<ItemListContainer />} />
 
           <Route

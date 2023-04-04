@@ -13,10 +13,18 @@ import AdbIcon from "@mui/icons-material/Adb";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
 const pages = [
-  <Link to="/category/drones" style={{ textDecoration: "none" }}>
+  <Link
+    className="menu"
+    to="/category/drones"
+    style={{ textDecoration: "none" }}
+  >
     Drones
   </Link>,
-  <Link to="/category/accesorios" style={{ textDecoration: "none" }}>
+  <Link
+    className="menu"
+    to="/category/accesorios"
+    style={{ textDecoration: "none" }}
+  >
     Accesorios
   </Link>,
 ];
@@ -54,7 +62,11 @@ const Footer = () => {
               textDecoration: "none",
             }}
           >
-            <Link style={{ textDecoration: "none" }} to="/">
+            <Link
+              className="logo-navbar"
+              style={{ textDecoration: "none" }}
+              to="/"
+            >
               DRON STATION
             </Link>
           </Typography>
